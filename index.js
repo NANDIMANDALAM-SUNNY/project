@@ -69,7 +69,18 @@ app.post('/register',async (req,res)=>{
                     from: "myemail@gmail.com",
                     to: email,
                     subject: "Account Confirmation",
-                    text: "Your Account has been succesfully created", // plain text body
+                    text: "Your Account has been succesfully created", 
+                     html:`
+                    <div style="margin:50px">
+                    <div style=" border: 1px solid black;border-radius: 30px;padding:20px ">
+                    <h3>Thank you for joining with us</h3>
+                        <p>You will get notified for the latest news and updates</p>
+                       
+                        <img width="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQKfVYiWBAIiYbX252T8tlMEDMoOZdTWf52sv3mFFV&s"  />
+                    </div>
+                <p style="color:grey">You're receiving this email because this gmail account is associated with us.</p>
+                 </div>
+                    `
             }
              transporter.sendMail(mailOptions, function(error, response) {
                          if (error) {
