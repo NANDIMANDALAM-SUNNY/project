@@ -32,4 +32,4 @@ const userSchemaData = new mongoose.Schema({
     } 
 });
 
-module.exports = mongoose.model('User', userSchemaData);
+module.exports = mongoose.model('ecgst', userSchemaData);
